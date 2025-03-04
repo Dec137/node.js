@@ -44,6 +44,7 @@ async function scrapeTitle(url) {
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'], // Required for Render
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium', // Point to installed Chromium
   });
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: 'networkidle2' });
