@@ -57,7 +57,7 @@ async function scrapeTitle(url) {
 // Function to send a message to Telegram
 async function sendMessage(chatId, text) {
   const telegramToken = '7031299961:AAHy0waGghDRRR4ll593q6vRs7PCDchxUdo'; // Replace with your bot token
-  const telegramUrl = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
+  const telegramUrl = `https://api.telegram.org/bot7031299961:AAHy0waGghDRRR4ll593q6vRs7PCDchxUdo/sendMessage`;
 
   const payload = {
     chat_id: chatId,
